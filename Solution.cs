@@ -53,7 +53,7 @@ public class Solution
                     {
                         visitedWebsites[2] = usernameToVisits[user][third].Website;
 
-                        string pattern = string.Join(DELIMITER_BETWEEN_VALUESs);
+                        string pattern = string.Join(DELIMITER_BETWEEN_VALUES, visitedWebsites);
                         visitedPatternToNumberOfUniqueUsernameVisits.TryAdd(pattern, new HashSet<string>());
                         visitedPatternToNumberOfUniqueUsernameVisits[pattern].Add(user);
                     }
@@ -88,7 +88,7 @@ public class Solution
         }
 
         int dOne = mostVisitedPattern.IndexOf(DELIMITER_BETWEEN_VALUES);
-        int dTwo = mostVisitedPattern.LastIndexOf(DELIMITER_BETWEEN_VALUESS);
+        int dTwo = mostVisitedPattern.LastIndexOf(DELIMITER_BETWEEN_VALUES);
         int dSize = DELIMITER_BETWEEN_VALUES.Length;
 
         return [
