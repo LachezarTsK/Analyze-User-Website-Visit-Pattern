@@ -24,11 +24,11 @@ const NUMBER_OF_VISITED_WEBSITES_IN_PATTERN = 3
 
 func mostVisitedPattern(username []string, timestamp []int, website []string) []string {
     
-    var usernameToVisits map[string][]*Visit 
-                = createMapUsernameToVisits(username, timestamp, website)
+    var usernameToVisits map[string][]*Visit = 
+                  createMapUsernameToVisits(username, timestamp, website)
 
-    var visitedPatternToNumberOfUniqueUsernameVisits map[string]*HashSet 
-                = createMapVisitedPatternToNumberOfUniqueUsernameVisits(usernameToVisits)
+    var visitedPatternToNumberOfUniqueUsernameVisits map[string]*HashSet =
+                  createMapVisitedPatternToNumberOfUniqueUsernameVisits(usernameToVisits)
 
     return findMostVisitedPattern(visitedPatternToNumberOfUniqueUsernameVisits)
 }
